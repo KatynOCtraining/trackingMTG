@@ -1,0 +1,44 @@
+.footer {
+  background-color: #1e1e1e; // Couleur sombre pour le contraste
+  color: #ffffff; // Texte blanc
+  padding: 20px 10px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cccccc;
+
+      .footer-link {
+        color: #3b4cca; // Couleur principale
+        text-decoration: none;
+
+        &:hover {
+          color: #f0e68c; // Couleur dorée au survol
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
+      .social-link {
+        color: #cccccc;
+        font-size: 20px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #3b4cca;
+        }
+      }
+    }
+  }
+}

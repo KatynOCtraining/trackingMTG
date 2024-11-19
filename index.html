@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MGTracking</title>
+    <script
+      src="https://kit.fontawesome.com/bb33b41c96.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="navbar-logo">
+          <img src="./ressources/assets/logo_magic.png" alt="Magic Logo" />
+        </a>
+        <ul class="navbar-links">
+          <li><a href="#recherche" class="nav-link active">Recherche</a></li>
+          <li><a href="#collection" class="nav-link">Ma Collection</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Recherche Section -->
+      <section id="recherche" class="section active">
+        <h1>Recherche</h1>
+        <p>Utilisez la barre de recherche pour trouver vos cartes.</p>
+        <!-- Contenu de la recherche -->
+      </section>
+
+      <!-- Ma Collection Section -->
+      <section id="collection" class="section">
+        <h1>Ma Collection</h1>
+        <p>Liste des cartes que vous avez ajoutées à votre collection.</p>
+        <!-- Contenu de la collection -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          Données fournies par
+          <a href="https://scryfall.com" target="_blank" class="footer-link"
+            >Scryfall API</a
+          >.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-link" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link" aria-label="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./nav.js"></script>
+    <script src="./card.js"></script>
+  </body>
+</html>

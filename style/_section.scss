@@ -1,0 +1,18 @@
+.section {
+  display: none;
+  padding: 20px;
+
+  &.active {
+    display: block;
+  }
+}
+
+#recherche {
+  background-color: #f8f8f8;
+  color: $primary-color;
+}
+
+#collection {
+  background-color: #fff;
+  color: $primary-color;
+}
