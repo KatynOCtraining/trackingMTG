@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Collection Magic</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#accueil">Accueil</a>
+      <a href="#collection">Collection</a>
+      <a href="#statistiques">Statistiques</a>
+    </nav>
+
+    <div class="container" id="collection">
+      <div class="section-selection">
+        <button id="btn-recherche">Recherche</button>
+        <button id="btn-ma-collection">Ma Collection</button>
+      </div>
+
+      <div id="recherche">
+        <div class="filtres">
+          <select id="filtre-extension">
+            <option>Toutes extensions</option>
+            <!-- À remplir dynamiquement via API -->
+          </select>
+          <select id="filtre-type">
+            <option>Tous types</option>
+            <option>Créature</option>
+            <option>Sort</option>
+            <!-- Autres types de cartes -->
+          </select>
+        </div>
+        <div id="liste-cartes">
+          <div class="carte">
+            <span>Nom de la carte</span>
+            <span>Extension</span>
+            <input type="checkbox" name="possession" />
+          </div>
+          <!-- Autres cartes à générer dynamiquement -->
+        </div>
+
+        <div id="liste-cartes-recherche">
+          <!-- Cartes de recherche à générer dynamiquement -->
+        </div>
+      </div>
+
+      <div id="ma-collection">
+        <div class="filtres">
+          <select id="filtre-extension-collection">
+            <option>Toutes extensions</option>
+            <!-- À remplir dynamiquement via API -->
+          </select>
+          <select id="filtre-type-collection">
+            <option>Tous types</option>
+            <option>Créature</option>
+            <option>Sort</option>
+            <!-- Autres types de cartes -->
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container statistiques" id="statistiques">
+      <h2>Statistiques de Collection</h2>
+      <div id="stats-globales">
+        <p>Taux de possession global : <span id="taux-global">0%</span></p>
+        <p>Nombre total de cartes : <span id="total-cartes">0</span></p>
+      </div>
+      <div id="stats-extensions">
+        <!-- Statistiques par extension -->
+      </div>
+    </div>
+
+    <script>
+      // Gestion de l'affichage des sections
+      document
+        .getElementById("btn-recherche")
+        .addEventListener("click", function () {
+          document.getElementById("recherche").classList.add("active");
+          document.getElementById("ma-collection").classList.remove("active");
+        });
+
+      document
+        .getElementById("btn-ma-collection")
+        .addEventListener("click", function () {
+          document.getElementById("ma-collection").classList.add("active");
+          document.getElementById("recherche").classList.remove("active");
+        });
+
+      // Conserver le script original
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ici serait placé votre script_card.js original
+        // Pour ne pas casser la fonctionnalité existante
+      });
+    </script>
+    <script src="./script_card.js"></script>
+  </body>
+</html>

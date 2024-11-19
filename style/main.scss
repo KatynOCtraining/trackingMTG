@@ -1,0 +1,183 @@
+//Variables
+$primary-bg: #f4f4f4;
+$navbar-bg: #333;
+$white: white;
+$border-color: #ddd;
+
+@import "./nav";
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: $primary-bg;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  color: $white;
+  @include flex-center;
+  justify-content: space-around;
+  padding: 1rem;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.carte {
+  background-color: $white;
+  border: 1px solid $border-color;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistiques {
+  background-color: $white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.filtres {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  select {
+    padding: 5px;
+  }
+}
+
+.carte {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid $border-color;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  img {
+    margin-right: 15px;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+
+  &.common {
+    border-left: 5px solid #a8a8a8;
+  } // Couleur pour commun
+  &.uncommon {
+    border-left: 5px solid #65a30d;
+  }
+  &.rare {
+    border-left: 5px solid #2563eb;
+  }
+  &.mythic {
+    border-left: 5px solid #be185d;
+  }
+}
+
+#stats-globales {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.navbar a:hover {
+  background-color: #555;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.section-selection {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.section-selection button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.section-selection button:hover {
+  background-color: #555;
+}
+#recherche,
+#ma-collection {
+  display: none;
+}
+#recherche.active,
+#ma-collection.active {
+  display: block;
+}
+.carte {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.statistiques {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
